@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Nikairu/Meets-App/static/css/main.7f904051.chunk.css",
+    "main.js": "/Nikairu/Meets-App/static/js/main.f8cbd72e.chunk.js",
+    "main.js.map": "/Nikairu/Meets-App/static/js/main.f8cbd72e.chunk.js.map",
+    "runtime-main.js": "/Nikairu/Meets-App/static/js/runtime-main.d41a3b33.js",
+    "runtime-main.js.map": "/Nikairu/Meets-App/static/js/runtime-main.d41a3b33.js.map",
+    "static/js/2.d263d8a3.chunk.js": "/Nikairu/Meets-App/static/js/2.d263d8a3.chunk.js",
+    "static/js/2.d263d8a3.chunk.js.map": "/Nikairu/Meets-App/static/js/2.d263d8a3.chunk.js.map",
+    "index.html": "/Nikairu/Meets-App/index.html",
+    "precache-manifest.c9959f77e237b75188e41287aefe8bcf.js": "/Nikairu/Meets-App/precache-manifest.c9959f77e237b75188e41287aefe8bcf.js",
+    "service-worker.js": "/Nikairu/Meets-App/service-worker.js",
+    "static/css/main.7f904051.chunk.css.map": "/Nikairu/Meets-App/static/css/main.7f904051.chunk.css.map",
+    "static/js/2.d263d8a3.chunk.js.LICENSE.txt": "/Nikairu/Meets-App/static/js/2.d263d8a3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d41a3b33.js",
+    "static/js/2.d263d8a3.chunk.js",
+    "static/css/main.7f904051.chunk.css",
+    "static/js/main.f8cbd72e.chunk.js"
+  ]
+}
