@@ -17,7 +17,9 @@ describe("<Event /> component", () => {
     EventWrapper.setState({
       details: false,
     });
-    EventWrapper.find(".details-button").simulate("click");
-    expect(EventWrapper.find(".details").text()).toBe(mockData[0].description);
+    EventWrapper.find(".details-btn").simulate("click");
+    expect(EventWrapper.find(".description").text()).toBe(
+      mockData[0].description
+    );
   });
 });

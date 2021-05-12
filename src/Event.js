@@ -5,7 +5,7 @@ class Event extends Component {
     details: false,
   };
 
-  showDetails = () => {
+  toggleDetails = () => {
     this.setState({
       details: !this.state.details,
     });
@@ -31,12 +31,12 @@ class Event extends Component {
           startDate
         )} - ${this.formatDate(endDate)}`}</p>
         <p className="summary">{`${this.props.events.summary}`}</p>
-        <button className="details-button" onClick={this.showDetails}>
+        <button className="details-btn" onClick={this.toggleDetails}>
           Details
         </button>
         {this.state.details && (
           <div className="details">
-            <p className="summary">{`${this.props.events.description}`}</p>
+            <p className="description">{`${this.props.events.description}`}</p>
           </div>
         )}
       </div>
