@@ -31,11 +31,11 @@ class Event extends Component {
           startDate
         )} - ${this.formatDate(endDate)}`}</p>
         <p className="summary">{`${this.props.events.summary}`}</p>
-        <button className="details-button" onClick={this.showDetails}>
+        <button className="details-btn" onClick={this.showDetails}>
           Details
         </button>
         {this.state.details && (
-          <div className="details">
+          <div className="event__Details">
             <p className="summary">{`${this.props.events.description}`}</p>
           </div>
         )}
