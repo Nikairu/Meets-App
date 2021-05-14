@@ -10,7 +10,7 @@ describe("<Event /> component", () => {
   });
 
   test("render correct number of events", () => {
-    expect(EventWrapper.find(".event")).toHaveLength(1);
+    expect(EventWrapper.find(".summary")).toHaveLength(1);
   });
 
   test("clicking details should change the show state", () => {
