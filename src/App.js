@@ -21,7 +21,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>sadge</p>
         <CitySearch locations={this.state.locations} />
         <NumberOfEvents onNumberOfEventsChange={this.onNumberOfEventsChange} />
         <EventList
