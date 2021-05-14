@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Nikairu/Meets-App/precache-manifest.c95da912c3986ed1ebacb81e1048d294.js"
+  "/Nikairu/Meets-App/precache-manifest.266bec067afc5f0bcadb0925207019ef.js"
 );
 
 self.addEventListener('message', (event) => {

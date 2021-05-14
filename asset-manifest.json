@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Nikairu/Meets-App/static/css/main.7f904051.chunk.css",
-    "main.js": "/Nikairu/Meets-App/static/js/main.bc1292d1.chunk.js",
-    "main.js.map": "/Nikairu/Meets-App/static/js/main.bc1292d1.chunk.js.map",
+    "main.js": "/Nikairu/Meets-App/static/js/main.fd55f161.chunk.js",
+    "main.js.map": "/Nikairu/Meets-App/static/js/main.fd55f161.chunk.js.map",
     "runtime-main.js": "/Nikairu/Meets-App/static/js/runtime-main.91225073.js",
     "runtime-main.js.map": "/Nikairu/Meets-App/static/js/runtime-main.91225073.js.map",
-    "static/js/2.f9701a69.chunk.js": "/Nikairu/Meets-App/static/js/2.f9701a69.chunk.js",
-    "static/js/2.f9701a69.chunk.js.map": "/Nikairu/Meets-App/static/js/2.f9701a69.chunk.js.map",
+    "static/js/2.039d6592.chunk.js": "/Nikairu/Meets-App/static/js/2.039d6592.chunk.js",
+    "static/js/2.039d6592.chunk.js.map": "/Nikairu/Meets-App/static/js/2.039d6592.chunk.js.map",
     "index.html": "/Nikairu/Meets-App/index.html",
-    "precache-manifest.c95da912c3986ed1ebacb81e1048d294.js": "/Nikairu/Meets-App/precache-manifest.c95da912c3986ed1ebacb81e1048d294.js",
+    "precache-manifest.266bec067afc5f0bcadb0925207019ef.js": "/Nikairu/Meets-App/precache-manifest.266bec067afc5f0bcadb0925207019ef.js",
     "service-worker.js": "/Nikairu/Meets-App/service-worker.js",
     "static/css/main.7f904051.chunk.css.map": "/Nikairu/Meets-App/static/css/main.7f904051.chunk.css.map",
-    "static/js/2.f9701a69.chunk.js.LICENSE.txt": "/Nikairu/Meets-App/static/js/2.f9701a69.chunk.js.LICENSE.txt"
+    "static/js/2.039d6592.chunk.js.LICENSE.txt": "/Nikairu/Meets-App/static/js/2.039d6592.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.91225073.js",
-    "static/js/2.f9701a69.chunk.js",
+    "static/js/2.039d6592.chunk.js",
     "static/css/main.7f904051.chunk.css",
-    "static/js/main.bc1292d1.chunk.js"
+    "static/js/main.fd55f161.chunk.js"
   ]
 }
