@@ -15,11 +15,11 @@ defineFeature(feature, (test) => {
     let AppWrapper;
     given("the list of events has been loaded", () => {
       AppWrapper = mount(<App />);
-      AppWrapper.update();
-      expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
     });
 
-    when("the user hasn’t clicked to show the event’s details", () => {});
+    when("the user hasn’t clicked to show the event’s details", () => {
+      expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
+    });
 
     then("all the event’s details will be collapsed", () => {
       const eventDetails = AppWrapper.find(".event .event__Details");
@@ -35,11 +35,10 @@ defineFeature(feature, (test) => {
     let AppWrapper;
     given("the list of events has been loaded", () => {
       AppWrapper = mount(<App />);
-      AppWrapper.update();
-      expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
     });
 
     when("the user clicks “show details” on an event", () => {
+      expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
       AppWrapper.find(".event .details-btn").at(0).simulate("click");
     });
 
@@ -50,19 +49,19 @@ defineFeature(feature, (test) => {
 
   test("User can collapse an event to hide its details", ({
     given,
+    and,
     when,
     then,
   }) => {
     let AppWrapper;
-    given(
-      "the list of events has been loaded and the user has clicked “show details” on an event",
-      () => {
-        AppWrapper = mount(<App />);
-        AppWrapper.update();
-        AppWrapper.find(".event .details-btn").at(0).simulate("click");
-        expect(AppWrapper.find(".event .event__Details")).toHaveLength(1);
-      }
-    );
+    given("the list of events has been loaded", () => {
+      AppWrapper = mount(<App />);
+    });
+
+    and("the user has clicked “show details” on an event", () => {
+      AppWrapper.find(".event .details-btn").at(0).simulate("click");
+      expect(AppWrapper.find(".event .event__Details")).toHaveLength(1);
+    });
 
     when("the user clicks “hide details” on an event", () => {
       AppWrapper.find(".event .details-btn").at(0).simulate("click");

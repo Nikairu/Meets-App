@@ -11,6 +11,7 @@ When the user clicks “show details” on an event
 Then the event’s details will be shown
 
 Scenario: User can collapse an event to hide its details 
-Given the list of events has been loaded and the user has clicked “show details” on an event
+Given the list of events has been loaded
+And the user has clicked “show details” on an event
 When the user clicks “hide details” on an event
 Then the event’s details will be hidden
