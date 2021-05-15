@@ -55,7 +55,7 @@ export const getEvents = async () => {
     return mockData;
   }
   console.log(navigator.onLine);
-  console.log(localStorage.getItem("lastEvents"));
+  console.log(Json.parse(localStorage.getItem("lastEvents")));
   if (!navigator.onLine) {
     const events = localStorage.getItem("lastEvents");
     NProgress.done();
