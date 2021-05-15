@@ -21,6 +21,16 @@ class App extends Component {
         this.setState({ events, locations: extractLocations(events) });
       }
     });
+    if (!navigator.onLine) {
+      this.setState({
+        isOffline:
+          "The app is currently offline so this data may not be up to date.",
+      });
+    } else {
+      this.setState({
+        isOffline: "",
+      });
+    }
   }
 
   componentWillUnmount() {
@@ -47,17 +57,6 @@ class App extends Component {
 
   render() {
     const { events, numberOfEvents, locations } = this.state;
-
-    if (!navigator.onLine) {
-      this.setState({
-        isOffline:
-          "The app is currently offline so this data may not be up to date.",
-      });
-    } else {
-      this.setState({
-        isOffline: "",
-      });
-    }
 
     return (
       <div className="App">
