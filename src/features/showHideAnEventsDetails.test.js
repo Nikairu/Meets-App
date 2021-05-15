@@ -1,11 +1,8 @@
-import { loadFeature, defineFeature } from "jest-cucumber";
 import React from "react";
 import { mount } from "enzyme";
+import { loadFeature, defineFeature } from "jest-cucumber";
 import App from "../App";
 import { mockData } from "../mock-data";
-import { extractLocations } from "../api";
-
-const locations = extractLocations(mockData);
 
 const feature = loadFeature("./src/features/showHideAnEventsDetails.feature");
 

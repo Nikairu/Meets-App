@@ -4,6 +4,7 @@ class CitySearch extends Component {
   state = {
     query: "",
     suggestions: [],
+    displayAll: false,
   };
 
   handleInputChanged = (event) => {
@@ -18,31 +19,53 @@ class CitySearch extends Component {
   };
 
   handleItemClicked = (suggestion) => {
+    suggestion !== "all" &&
+      this.setState({
+        query: suggestion,
+        displayAll: false,
+      });
+
+    this.props.updateEvents(suggestion);
+  };
+
+  handlefocus = (focusState) => {
     this.setState({
-      query: suggestion,
-      suggestions: [],
+      displayAll: focusState,
     });
   };
 
   render() {
+    const { displayAll, query, suggestions } = this.state;
+
     return (
       <div className="CitySearch">
         <input
           type="text"
           className="city"
-          value={this.state.query}
+          value={query}
           onChange={this.handleInputChanged}
+          onFocus={() => this.handlefocus(true)}
+          onBlur={() => this.handlefocus(false)}
         />
-        <ul className="suggestions">
-          {this.state.suggestions.map((suggestion) => (
+
+        <ul
+          className="suggestions"
+          style={displayAll ? {} : { display: "none" }}
+        >
+          {suggestions.map((suggestion) => (
             <li
               key={suggestion}
+              onMouseDown={(e) => e.preventDefault()}
               onClick={() => this.handleItemClicked(suggestion)}
             >
               {suggestion}
             </li>
           ))}
-          <li>
+
+          <li
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => this.handleItemClicked("all")}
+          >
             <b>See all cities</b>
           </li>
         </ul>

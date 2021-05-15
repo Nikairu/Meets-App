@@ -10,6 +10,7 @@
     "atatus-js": "^4.3.2",
     "atatus-spa": "^4.3.2",
     "axios": "^0.19.2",
+    "nprogress": "^0.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1"
