@@ -5,6 +5,7 @@ import { extractLocations, getEvents } from "./api";
 import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import NumberOfEvents from "./NumberOfEvents";
+import { ErrorAlert } from "./Alert";
 
 class App extends Component {
   state = {
@@ -47,8 +48,20 @@ class App extends Component {
   render() {
     const { events, numberOfEvents, locations } = this.state;
 
+    if (!navigator.onLine) {
+      this.setState({
+        isOffline:
+          "The app is currently offline so this data may not be up to date.",
+      });
+    } else {
+      this.setState({
+        isOffline: "",
+      });
+    }
+
     return (
       <div className="App">
+        <ErrorAlert text={this.state.isOffline} />
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents onNumberOfEventsChange={this.onNumberOfEventsChange} />
         <EventList events={events.slice(0, numberOfEvents)} />
