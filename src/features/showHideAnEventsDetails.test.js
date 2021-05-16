@@ -18,6 +18,7 @@ defineFeature(feature, (test) => {
     });
 
     when("the user hasn’t clicked to show the event’s details", () => {
+      AppWrapper.update();
       expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
     });
 
@@ -38,6 +39,7 @@ defineFeature(feature, (test) => {
     });
 
     when("the user clicks “show details” on an event", () => {
+      AppWrapper.update();
       expect(AppWrapper.find(".event")).toHaveLength(mockData.length);
       AppWrapper.find(".event .details-btn").at(0).simulate("click");
     });
@@ -59,6 +61,7 @@ defineFeature(feature, (test) => {
     });
 
     and("the user has clicked “show details” on an event", () => {
+      AppWrapper.update();
       AppWrapper.find(".event .details-btn").at(0).simulate("click");
       expect(AppWrapper.find(".event .event__Details")).toHaveLength(1);
     });
