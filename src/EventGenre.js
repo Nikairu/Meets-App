@@ -6,10 +6,10 @@ const EventGenre = ({ events }) => {
 
   useEffect(() => {
     const getData = () => {
-      const genres = ["React", "JavaScript", "Node", "jQuery", "AngularJS"];
+      const genres = ["React", "JavaScript", "Node", "jQuery", "Angular"];
       const data = genres.map((genre) => {
         const value = events.filter(({ summary }) =>
-          summary.split(" ").includes(genre)
+          summary.toUpperCase().split(" ").includes(genre.toUpperCase())
         ).length;
         return { name: genre, value };
       });
