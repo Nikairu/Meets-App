@@ -9,7 +9,7 @@ const EventGenre = ({ events }) => {
       const genres = ["React", "JavaScript", "Node", "jQuery", "Angular"];
       const data = genres.map((genre) => {
         const value = events.filter(({ summary }) =>
-          summary.toUpperCase().split(" ").includes(genre.toUpperCase())
+          summary.toUpperCase().includes(genre.toUpperCase())
         ).length;
         return { name: genre, value };
       });
