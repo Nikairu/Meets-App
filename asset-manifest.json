@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Meets-App/static/css/main.10165565.chunk.css",
-    "main.js": "/Meets-App/static/js/main.d0df8779.chunk.js",
-    "main.js.map": "/Meets-App/static/js/main.d0df8779.chunk.js.map",
+    "main.js": "/Meets-App/static/js/main.b406624e.chunk.js",
+    "main.js.map": "/Meets-App/static/js/main.b406624e.chunk.js.map",
     "runtime-main.js": "/Meets-App/static/js/runtime-main.5ac20866.js",
     "runtime-main.js.map": "/Meets-App/static/js/runtime-main.5ac20866.js.map",
     "static/js/2.c72f1be2.chunk.js": "/Meets-App/static/js/2.c72f1be2.chunk.js",
     "static/js/2.c72f1be2.chunk.js.map": "/Meets-App/static/js/2.c72f1be2.chunk.js.map",
     "index.html": "/Meets-App/index.html",
-    "precache-manifest.9eb2f18e6f78132d23fe850fd9e2db20.js": "/Meets-App/precache-manifest.9eb2f18e6f78132d23fe850fd9e2db20.js",
+    "precache-manifest.537c074dff9b12737b29ea27a5170e29.js": "/Meets-App/precache-manifest.537c074dff9b12737b29ea27a5170e29.js",
     "service-worker.js": "/Meets-App/service-worker.js",
     "static/css/main.10165565.chunk.css.map": "/Meets-App/static/css/main.10165565.chunk.css.map",
     "static/js/2.c72f1be2.chunk.js.LICENSE.txt": "/Meets-App/static/js/2.c72f1be2.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.5ac20866.js",
     "static/js/2.c72f1be2.chunk.js",
     "static/css/main.10165565.chunk.css",
-    "static/js/main.d0df8779.chunk.js"
+    "static/js/main.b406624e.chunk.js"
   ]
 }
