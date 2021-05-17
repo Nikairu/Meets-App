@@ -8,6 +8,13 @@ class CitySearch extends Component {
     displayAll: false,
   };
 
+  componentDidUpdate(nextProps) {
+    const { suggestions } = this.state;
+    if (nextProps.locations !== suggestions) {
+      this.setState({ suggestions: nextProps.locations });
+    }
+  }
+
   handleInputChanged = (event) => {
     const value = event.target.value;
     const suggestions = this.props.locations.filter((location) => {

@@ -23,9 +23,9 @@ import EventGenre from "./EventGenre";
 
 class App extends Component {
   state = {
+    events: [],
     locations: [],
     numberOfEvents: 32,
-    events: [],
   };
 
   componentDidMount() {
@@ -70,12 +70,13 @@ class App extends Component {
   };
 
   getData = () => {
-    const { locations, events } = this.state;
-    const data = locations.map((location) => {
+    const { events } = this.state;
+    const specificLocation = extractLocations(events);
+    const data = specificLocation.map((location) => {
       const number = events.filter(
         (event) => event.location === location
       ).length;
-      const city = location.split(" ").shift();
+      const city = location.split(", ").shift();
       return { city, number };
     });
     return data;
@@ -87,7 +88,7 @@ class App extends Component {
     return (
       <div className="App">
         <ErrorAlert text={this.state.isOffline} />
-        <h4>Choose a city:</h4>
+        <h4>Type a city:</h4>
         <CitySearch locations={locations} updateEvents={this.updateEvents} />
         <NumberOfEvents onNumberOfEventsChange={this.onNumberOfEventsChange} />
         <div className="data-vis-wrapper">
