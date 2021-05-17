@@ -6,14 +6,8 @@ class CitySearch extends Component {
     query: "",
     suggestions: [],
     displayAll: false,
+    first: true,
   };
-
-  componentDidUpdate(nextProps) {
-    const { suggestions } = this.state;
-    if (nextProps.locations !== suggestions) {
-      this.setState({ suggestions: nextProps.locations });
-    }
-  }
 
   handleInputChanged = (event) => {
     const value = event.target.value;
@@ -78,15 +72,17 @@ class CitySearch extends Component {
           className="suggestions"
           style={displayAll ? {} : { display: "none" }}
         >
-          {suggestions.map((suggestion) => (
-            <li
-              key={suggestion}
-              onMouseDown={(e) => e.preventDefault()}
-              onClick={() => this.handleItemClicked(suggestion)}
-            >
-              {suggestion}
-            </li>
-          ))}
+          {(suggestions.length ? suggestions : this.props.locations).map(
+            (suggestion) => (
+              <li
+                key={suggestion}
+                onMouseDown={(e) => e.preventDefault()}
+                onClick={() => this.handleItemClicked(suggestion)}
+              >
+                {suggestion}
+              </li>
+            )
+          )}
 
           <li
             onMouseDown={(e) => e.preventDefault()}
